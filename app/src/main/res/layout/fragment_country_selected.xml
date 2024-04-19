@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CountrySelectedFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_search_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/gray1"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray1">
+
+            <ImageButton
+                android:id="@+id/button_back_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button_swap_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/swap_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_from_country"
+                app:layout_constraintTop_toTopOf="@id/text_from_country" />
+
+            <TextView
+                android:id="@+id/text_from_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/gray1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/button_swap_country"
+                app:layout_constraintStart_toEndOf="@id/button_back_country"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Moscow" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/button_back_country"
+                app:layout_constraintTop_toBottomOf="@id/text_from_country" />
+
+            <TextView
+                android:id="@+id/text_to_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/button_cancel_edit_to_country"
+                app:layout_constraintStart_toStartOf="@id/text_from_country"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+                tools:text="Sochi" />
+
+            <ImageButton
+                android:id="@+id/button_cancel_edit_to_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/cancel_24"
+                app:layout_constraintBottom_toBottomOf="@id/text_to_country"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/button_swap_country"
+                app:layout_constraintTop_toTopOf="@id/text_to_country" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_search_country">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/button_ticket_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray1"
+                android:text="обратно"
+                android:textSize="12sp"
+                app:icon="@drawable/add_24" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textSize="12sp"
+                tools:text="24 фев" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
+                android:text="1, эконом"
+                android:textSize="12sp"
+                app:icon="@drawable/person_24" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
+                android:text="фильтр"
+                android:textSize="12sp"
+                app:icon="@drawable/filter_24" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_direct_flights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/gray1"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/scroll">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray1">
+
+            <TextView
+                android:id="@+id/text_direct_flights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/gray1"
+                android:text="Прямые рейсы"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/point1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/gray1"
+                android:src="@drawable/point_red_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_direct_flights" />
+
+            <TextView
+                android:id="@+id/text_avia1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@id/text_price1"
+                app:layout_constraintStart_toEndOf="@id/point1"
+                app:layout_constraintTop_toTopOf="@id/point1"
+                tools:text="Уральские авиалинии" />
+
+            <TextView
+                android:id="@+id/text_price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_avia1"
+                app:layout_constraintTop_toTopOf="@id/point1"
+                tools:text="2 390 P>" />
+
+            <TextView
+                android:id="@+id/text_time1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/gray1"
+                android:ellipsize="end"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_avia1"
+                app:layout_constraintTop_toBottomOf="@id/text_avia1"
+                tools:text="09:00 10:00 11:00" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/text_time1" />
+
+            <ImageView
+                android:id="@+id/point2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/gray1"
+                android:src="@drawable/point_blue_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <TextView
+                android:id="@+id/text_avia2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@id/text_price2"
+                app:layout_constraintStart_toEndOf="@id/point2"
+                app:layout_constraintTop_toTopOf="@id/point2"
+                tools:text="Победа" />
+
+            <TextView
+                android:id="@+id/text_price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_avia2"
+                app:layout_constraintTop_toTopOf="@id/point2"
+                tools:text="2 390 P>" />
+
+            <TextView
+                android:id="@+id/text_time2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/gray1"
+                android:ellipsize="end"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_avia2"
+                app:layout_constraintTop_toBottomOf="@id/text_avia2"
+                tools:text="09:00 10:00 11:00" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/text_time2" />
+
+            <ImageView
+                android:id="@+id/point3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/gray1"
+                android:src="@drawable/point_white_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <TextView
+                android:id="@+id/text_avia3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toStartOf="@id/text_price3"
+                app:layout_constraintStart_toEndOf="@id/point3"
+                app:layout_constraintTop_toTopOf="@id/point3"
+                tools:text="NordStar" />
+
+            <TextView
+                android:id="@+id/text_price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="@color/gray1"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_avia3"
+                app:layout_constraintTop_toTopOf="@id/point3"
+                tools:text="2 390 P>" />
+
+            <TextView
+                android:id="@+id/text_time3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/gray1"
+                android:ellipsize="end"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_avia3"
+                app:layout_constraintTop_toBottomOf="@id/text_avia3"
+                tools:text="09:00 10:00 11:00" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_time3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button_look_at_all_tickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@color/blue"
+        android:text="Посмотреть все билеты"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/cv_direct_flights" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="12dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/button_look_at_all_tickets">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray1">
+
+            <ImageView
+                android:id="@+id/im_notification"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="18dp"
+                android:backgroundTint="@color/gray1"
+                android:src="@drawable/notifications_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:backgroundTint="@color/gray1"
+                android:text="Подписка на цену"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/im_notification"
+                app:layout_constraintStart_toEndOf="@id/im_notification"
+                app:layout_constraintTop_toTopOf="@id/im_notification" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,17 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sd.searchticket.R
-import com.sd.searchticket.databinding.FragmentSearchBinding
 
-class SearchFragment : Fragment() {
+class CountrySelectedFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-       val binding:FragmentSearchBinding = FragmentSearchBinding.inflate(inflater, container, false)
-
-
-        return binding.root
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_country_selected, container, false)
     }
 }
