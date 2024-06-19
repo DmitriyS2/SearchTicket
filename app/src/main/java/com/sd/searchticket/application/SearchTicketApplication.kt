@@ -1,6 +1,7 @@
 package com.sd.searchticket.application
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-
-class SearchTicketApplication:Application()
+@HiltAndroidApp
+class SearchTicketApplication : Application()

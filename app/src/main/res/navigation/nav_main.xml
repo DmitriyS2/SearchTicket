@@ -15,4 +15,29 @@
         android:name="com.sd.searchticket.ui.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sd.searchticket.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/blankBackFragment"
+        android:name="com.sd.searchticket.ui.BlankBackFragment"
+        android:label="fragment_blank_back"
+        tools:layout="@layout/fragment_blank_back" />
+    <fragment
+        android:id="@+id/countrySelectedFragment"
+        android:name="com.sd.searchticket.ui.CountrySelectedFragment"
+        android:label="fragment_country_selected"
+        tools:layout="@layout/fragment_country_selected" />
+    <fragment
+        android:id="@+id/ticketsFragment"
+        android:name="com.sd.searchticket.ui.TicketsFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_tickets" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.sd.searchticket.ui.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
 </navigation>

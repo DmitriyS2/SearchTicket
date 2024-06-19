@@ -1,17 +1,25 @@
 package com.sd.searchticket.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.GravityCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.sd.searchticket.R
 import com.sd.searchticket.databinding.ActivityMainBinding
+import com.sd.searchticket.util.formatter
+import com.sd.searchticket.util.symbols
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        symbols.groupingSeparator = ' '
+        formatter.decimalFormatSymbols = symbols
 
         binding.apply {
             bottomMenu.setOnItemSelectedListener { menuItem ->
@@ -22,7 +30,6 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     R.id.hotels -> {
-
                         findNavController(R.id.nav_host_fragment)
                             .navigate(R.id.blankFragment)
                     }
@@ -31,8 +38,8 @@ class MainActivity : AppCompatActivity() {
                         findNavController(R.id.nav_host_fragment)
                             .navigate(R.id.blankFragment)
                     }
-                    R.id.notifications -> {
 
+                    R.id.notifications -> {
                         findNavController(R.id.nav_host_fragment)
                             .navigate(R.id.blankFragment)
                     }
@@ -41,10 +48,11 @@ class MainActivity : AppCompatActivity() {
                         findNavController(R.id.nav_host_fragment)
                             .navigate(R.id.blankFragment)
                     }
-
                 }
                 true
             }
         }
     }
 }
+
+

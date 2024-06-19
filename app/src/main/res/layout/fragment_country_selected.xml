@@ -32,7 +32,8 @@
                 android:src="@drawable/back_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/button_back_country" />
 
             <ImageButton
                 android:id="@+id/button_swap_country"
@@ -43,7 +44,8 @@
                 android:src="@drawable/swap_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/text_from_country"
-                app:layout_constraintTop_toTopOf="@id/text_from_country" />
+                app:layout_constraintTop_toTopOf="@id/text_from_country"
+                android:contentDescription="@string/button_swap_country" />
 
             <TextView
                 android:id="@+id/text_from_country"
@@ -88,11 +90,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/cancel_24"
+                android:src="@drawable/clear_24"
                 app:layout_constraintBottom_toBottomOf="@id/text_to_country"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/button_swap_country"
-                app:layout_constraintTop_toTopOf="@id/text_to_country" />
+                app:layout_constraintTop_toTopOf="@id/text_to_country"
+                android:contentDescription="@string/button_cancel_edit" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -112,34 +115,31 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="12dp"
-
-            android:orientation="horizontal"
-
-            >
+            android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_ticket_back"
+                android:id="@+id/button_date_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/gray1"
-                android:text="обратно"
+                android:text="@string/to_back"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_date_departure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/gray1"
                 android:textSize="12sp"
-                app:icon="@drawable/add_24" />
+                tools:text="24 фев, сб" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@color/gray1"
-                android:textSize="12sp"
-                tools:text="24 фев" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:backgroundTint="@color/gray1"
-                android:text="1, эконом"
+                android:text="@string/_1_econom"
                 android:textSize="12sp"
                 app:icon="@drawable/person_24" />
 
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@color/gray1"
-                android:text="фильтр"
+                android:text="@string/filter"
                 android:textSize="12sp"
                 app:icon="@drawable/filter_24" />
 
@@ -176,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:backgroundTint="@color/gray1"
-                android:text="Прямые рейсы"
+                android:text="@string/direct_flights"
                 android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -190,7 +190,8 @@
                 android:backgroundTint="@color/gray1"
                 android:src="@drawable/point_red_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_direct_flights" />
+                app:layout_constraintTop_toBottomOf="@id/text_direct_flights"
+                android:contentDescription="@string/point1" />
 
             <TextView
                 android:id="@+id/text_avia1"
@@ -227,6 +228,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@color/gray1"
                 android:ellipsize="end"
+                android:maxLines="1"
                 android:textSize="18sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -237,7 +239,6 @@
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
-
                 android:layout_height="1dp"
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="8dp"
@@ -252,7 +253,8 @@
                 android:backgroundTint="@color/gray1"
                 android:src="@drawable/point_blue_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view2" />
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                android:contentDescription="@string/point2" />
 
             <TextView
                 android:id="@+id/text_avia2"
@@ -289,6 +291,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@color/gray1"
                 android:ellipsize="end"
+                android:maxLines="1"
                 android:textSize="18sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -313,7 +316,8 @@
                 android:backgroundTint="@color/gray1"
                 android:src="@drawable/point_white_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view3" />
+                app:layout_constraintTop_toBottomOf="@id/view3"
+                android:contentDescription="@string/point3" />
 
             <TextView
                 android:id="@+id/text_avia3"
@@ -350,6 +354,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@color/gray1"
                 android:ellipsize="end"
+                android:maxLines="1"
                 android:textSize="18sp"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -378,15 +383,15 @@
         android:layout_marginHorizontal="12dp"
         android:layout_marginTop="18dp"
         android:backgroundTint="@color/blue"
-        android:text="Посмотреть все билеты"
+        android:text="@string/look_tickets"
         android:textSize="22sp"
         app:layout_constraintTop_toBottomOf="@id/cv_direct_flights" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintTop_toBottomOf="@id/button_look_at_all_tickets">
 
@@ -405,20 +410,31 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/blue" />
+                app:tint="@color/blue"
+                android:contentDescription="@string/notification" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
                 android:backgroundTint="@color/gray1"
-                android:text="Подписка на цену"
+                android:text="@string/subscription"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="@id/im_notification"
                 app:layout_constraintStart_toEndOf="@id/im_notification"
                 app:layout_constraintTop_toTopOf="@id/im_notification" />
 
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/im_notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/im_notification" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

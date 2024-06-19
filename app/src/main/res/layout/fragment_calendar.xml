@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CalendarFragment">
+
+    <ru.cleverpumpkin.calendar.CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:calendar_date_background="@color/gray2"
+        app:calendar_date_text_color="@color/white"
+        app:calendar_day_bar_background="@color/white"
+        app:calendar_day_bar_text_color="@color/white"
+        app:calendar_grid_color="@color/gray1"
+        app:calendar_grid_on_selected_dates="true"
+        app:calendar_month_text_color="@color/white"
+        app:calendar_year_selection_arrows_color="@color/white"
+        app:calendar_year_selection_text_color="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

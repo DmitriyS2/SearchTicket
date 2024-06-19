@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/image_takeoff"
                 android:src="@drawable/takeoff_24"
                 app:layout_constraintBottom_toBottomOf="@id/edit_from2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="@string/image_search2"
                 android:src="@drawable/search_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:hint="@string/from"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/image_search2"
@@ -60,6 +63,7 @@
                 android:id="@+id/edit_to2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:hint="@string/to"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@id/button_cancel_edit_to2"
                 app:layout_constraintStart_toStartOf="@id/edit_from2"
@@ -72,7 +76,9 @@
                 android:layout_marginHorizontal="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/cancel_24"
+                android:contentDescription="@string/button_cancel_edit2"
+
+                android:src="@drawable/clear_24"
                 app:layout_constraintBottom_toBottomOf="@id/edit_to2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/edit_to2"
@@ -92,9 +98,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_search"
-
-        >
+        app:layout_constraintTop_toBottomOf="@id/cv_search">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_route"
@@ -102,7 +106,6 @@
             android:layout_height="80dp"
             android:layout_marginEnd="12dp"
             android:backgroundTint="@color/green"
-
             app:cardCornerRadius="10dp">
 
             <ImageView
@@ -110,6 +113,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="@color/green"
+                android:contentDescription="@string/image_route"
                 android:src="@drawable/route_48" />
         </androidx.cardview.widget.CardView>
 
@@ -126,6 +130,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="@color/blue"
+                android:contentDescription="@string/image_route2"
                 android:src="@drawable/world_48" />
         </androidx.cardview.widget.CardView>
 
@@ -142,6 +147,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="@color/dark_blue"
+                android:contentDescription="@string/image_route3"
                 android:src="@drawable/calendar_48" />
         </androidx.cardview.widget.CardView>
 
@@ -157,6 +163,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="@color/red"
+                android:contentDescription="@string/image_route4"
                 android:src="@drawable/fire_48" />
         </androidx.cardview.widget.CardView>
 
@@ -178,7 +185,7 @@
             android:layout_marginEnd="12dp"
             android:backgroundTint="@color/gray1"
             android:gravity="center_horizontal"
-            android:text="Сложный\nмаршрут" />
+            android:text="@string/difficult_route" />
 
         <TextView
             android:layout_width="80dp"
@@ -186,7 +193,7 @@
             android:layout_marginEnd="12dp"
             android:backgroundTint="@color/gray1"
             android:gravity="center_horizontal"
-            android:text="Куда угодно"
+            android:text="@string/anywhere"
 
             />
 
@@ -196,14 +203,14 @@
             android:layout_marginEnd="12dp"
             android:backgroundTint="@color/gray1"
             android:gravity="center_horizontal"
-            android:text="Выходные" />
+            android:text="@string/weekend" />
 
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/gray1"
             android:gravity="center_horizontal"
-            android:text="Горячие билеты" />
+            android:text="@string/hot_tickets" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -245,10 +252,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
-
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/image_stambul"
                             android:src="@drawable/stambul"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -261,7 +268,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/gray2"
-                        android:text="Стамбул"
+                        android:text="@string/stambul"
                         app:layout_constraintStart_toEndOf="@id/image_stambul"
                         app:layout_constraintTop_toTopOf="@id/image_stambul" />
 
@@ -270,7 +277,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/gray2"
-                        android:text="Популярное направление"
+                        android:text="@string/pop_route"
                         android:textColor="@color/gray1"
                         app:layout_constraintStart_toEndOf="@id/image_stambul"
                         app:layout_constraintTop_toBottomOf="@id/text_stambul" />
@@ -305,6 +312,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/image_sochi"
                             android:src="@drawable/sochi"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -317,7 +325,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/gray2"
-                        android:text="Сочи"
+                        android:text="@string/sochi"
                         app:layout_constraintStart_toEndOf="@id/image_sochi"
                         app:layout_constraintTop_toTopOf="@id/image_sochi" />
 
@@ -326,7 +334,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/gray2"
-                        android:text="Популярное направление"
+                        android:text="@string/pop_route"
                         android:textColor="@color/gray1"
                         app:layout_constraintStart_toEndOf="@id/image_sochi"
                         app:layout_constraintTop_toBottomOf="@id/text_sochi" />
@@ -362,6 +370,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/image_phuket"
                             android:src="@drawable/phuket"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -374,7 +383,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/gray2"
-                        android:text="Пхукет"
+                        android:text="@string/phuket"
                         app:layout_constraintStart_toEndOf="@id/image_phuket"
                         app:layout_constraintTop_toTopOf="@id/image_phuket" />
 
@@ -383,7 +392,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/gray2"
-                        android:text="Популярное направление"
+                        android:text="@string/pop_route"
                         android:textColor="@color/gray1"
                         app:layout_constraintStart_toEndOf="@id/image_phuket"
                         app:layout_constraintTop_toBottomOf="@id/text_phuket" />
@@ -392,7 +401,6 @@
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.cardview.widget.CardView>
 
